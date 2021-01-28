@@ -32,7 +32,36 @@ export const listMetadata: Record<string, string> = {
 
 export async function getTokenlist(id: string): Promise<TokenList> {
     if (id === DEFAULT_LIST) {
-        return tokenlist;
+        // return tokenlist;
+        return {
+            name: "arbitrum",
+            tokens: [
+                {
+                    "address": "0x57Ca11067892510E022D65b0483b31Cd49155389",
+                    "chainId": 79377087078960,
+                    "name": "AToken",
+                    "symbol": "ATKN",
+                    "decimals": 18,
+                    "logoURI": "https://ropsten.etherscan.io/images/main/empty-token.png"
+                },
+                {
+                    "address": "0xE41d965f6e7541139f8D9F331176867FB6972Baf",
+                    "chainId": 79377087078960,
+                    "name": "ARB Token",
+                    "symbol": "ARB",
+                    "decimals": 18,
+                    "logoURI": "https://ropsten.etherscan.io/images/main/empty-token.png"
+                },
+                {
+                    "address": "0xBfB0FF82993c07E92C3deb652711B66ffBe095A7",
+                    "chainId": 79377087078960,
+                    "name": "Wrapped Eth",
+                    "symbol": "WETH",
+                    "decimals": 18,
+                    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+                }
+            ]
+        }
     }
     const listUrl = listMetadata[id];
     const response = await fetch(listUrl);
