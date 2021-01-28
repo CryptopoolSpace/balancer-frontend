@@ -1,11 +1,20 @@
 <template>
     <div class="message">
-        Balancer is partially reimbursing gas costs for some trades.
+        A port of Balancer live on Arbitrum testnet.
+        <br />
         <a
-            href="https://medium.com/balancer-protocol/exchange-gas-reimbursements-8326db66cab2"
+            href="https://portal.arbitrum.io/"
             target="_blank"
         >
-            Learn more
+            More dApps
+        </a>
+        &nbsp;
+        &nbsp;
+        <a
+            href="https://faucet.arbitrum.io/"
+            target="_blank"
+        >
+            Faucet
         </a>
     </div>
 </template>

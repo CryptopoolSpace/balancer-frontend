@@ -75,7 +75,7 @@ export function getAccountLink(address: string): string {
 }
 
 export function getPoolLink(pool: string): string {
-    return `https://arb-balancer-pools.netlify.app/#/pool/${pool}`;
+    return `https://pools.arbalancer.arbitrum.io/#/pool/${pool}`;
     const chainId = config.chainId;
     const prefixMap = {
         1: '',

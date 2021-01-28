@@ -6,13 +6,13 @@
                     class="logo"
                     :src="logo"
                 >
-                <span class="title">Balancer</span>
+                <span class="title">arBalancer</span>
             </div>
         </router-link>
         <div class="header-right">
             <a
                 class="link"
-                href="https://arb-balancer-pools.netlify.app"
+                href="https://pools.arbalancer.arbitrum.io/"
                 target="_blank"
             >
                 Add Liquidity
