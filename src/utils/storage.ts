@@ -154,7 +154,7 @@ function getPreferences(): Preferences {
                 outputAsset: '0xef13C0c8abcaf5767160018d268f9697aE4f5375',
             },
             79377087078960: {
-                inputAsset: '0xBfB0FF82993c07E92C3deb652711B66ffBe095A7',
+                inputAsset: 'ether',
                 outputAsset: '0xE41d965f6e7541139f8D9F331176867FB6972Baf',
             }
         },
