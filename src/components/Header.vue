@@ -12,7 +12,7 @@
         <div class="header-right">
             <a
                 class="link"
-                href="https://pools.balancer.exchange"
+                href="https://arb-balancer-pools.netlify.app"
                 target="_blank"
             >
                 Add Liquidity
