@@ -1,0 +1,37 @@
+{
+    "network": "arbitrum",
+    "chainId": 79377087078960,
+    "precision": 6,
+    "infuraKey": "237c3102f39b4940abbe12dc49165cd6",
+    "subgraphUrl": "https://graph.offchainlabs.com/subgraphs/name/balancer-labs/balancer-subgraph",
+    "subgraphBackupUrl": "https://ipfs.fleek.co/ipns/balancer-team-bucket.storage.fleek.co/balancer-exchange-kovan/pools/",
+    "addresses": {
+        "bFactory": "0xB9b9D2BaE60b86AFC8ED15b2c74a8ecF3ff409C6",
+        "bActions": "0x3A028B4e1E1aa45B6c7EfC2786dc2EAd750e6D43",
+        "dsProxyRegistry": "0xaCD52aCCBc0706b86117D916990D795bA2c0cEE4",
+        "exchangeProxy": "0xD7cE90756f8c0a41577C9A23D04ADeF14Af97B5e",
+        "weth": "0xBfB0FF82993c07E92C3deb652711B66ffBe095A7",
+        "multicall": "0x65b71D9aEBfb61be7336B621f6322AB677ed3eb7"
+    },
+    "connectors": {
+        "injected": {},
+        "walletconnect": {
+            "rpc": {
+                "79377087078960": "https://kovan3.arbitrum.io/rpc"
+            }
+        },
+        "portis": {
+            "network": "arbitrum",
+            "dappId": "3f1c3cfc-7dd5-4e8a-aa03-71ff7396d9fe"
+        },
+        "walletlink": {
+            "appName": "Balancer Exchange",
+            "darkMode": true,
+            "chainId": 79377087078960,
+            "ethJsonrpcUrl": "https://kovan3.arbitrum.io/rpc"
+        },
+        "fortmatic": {
+            "apiKey": "pk_live_9CE8FD92E54684ED"
+        }
+    }
+}

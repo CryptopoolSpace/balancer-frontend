@@ -17,14 +17,17 @@ export interface AccountState {
     proxy: string;
 }
 
+const multicallAddr = "0x4a40dCA0a4C7BcC95C5288Ab737a4b2d919158A6"
+
 export default class Ethereum {
     static async fetchAccountState(address: string, assets: string[]): Promise<AccountState> {
         assets = assets.filter(asset => asset !== ETH_KEY);
         const ethcallProvider = new Provider();
-        await ethcallProvider.init(provider);
+        await ethcallProvider.init(provider, multicallAddr);
         const calls = [];
         // Fetch balances and allowances
         const exchangeProxyAddress = config.addresses.exchangeProxy;
+        console.log("before")
         for (const assetAddress of assets) {
             const assetContract = new Contract(assetAddress, erc20Abi);
             const balanceCall = assetContract.balanceOf(address);
@@ -32,6 +35,7 @@ export default class Ethereum {
             calls.push(balanceCall);
             calls.push(allowanceCall);
         }
+        console.log("after balance")
         // Fetch ether balance
         const ethBalanceCall = ethcallProvider.getEthBalance(address);
         calls.push(ethBalanceCall);
@@ -45,6 +49,7 @@ export default class Ethereum {
         calls.push(proxyCall);
         // Fetch data
         const data = await ethcallProvider.all(calls);
+        console.log(data)
         const assetCount = assets.length;
         const allowances = {};
         allowances[exchangeProxyAddress] = {};
@@ -62,7 +67,7 @@ export default class Ethereum {
 
     static async fetchAssetMetadata(assets: string[]): Promise<Record<string, AssetMetadata>> {
         const ethcallProvider = new Provider();
-        await ethcallProvider.init(provider);
+        await ethcallProvider.init(provider, multicallAddr);
         const calls = [];
         // Fetch asset metadata
         for (const assetAddress of assets) {

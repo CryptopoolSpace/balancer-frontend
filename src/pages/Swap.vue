@@ -308,6 +308,7 @@ export default defineComponent({
             console.timeEnd('[SOR] fetchPools');
             await onAmountChange(activeInput.value);
             pools.value = sor.onChainCache.pools;
+            console.log("ended")
         }
 
         async function onAmountChange(amount: string): Promise<void> {

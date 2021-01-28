@@ -1,5 +1,6 @@
 import homestead from './homestead.json';
 import kovan from './kovan.json';
+import arbitrum from './arbitrum.json';
 
 interface Connector {
     id: string;
@@ -45,6 +46,10 @@ const configs = {
         untrusted: [],
         ...kovan,
     },
+    79377087078960: {
+        untrusted: [],
+        ...arbitrum,
+    }
 };
 // eslint-disable-next-line no-undef
 const network = process.env.APP_CHAIN_ID || 1;
