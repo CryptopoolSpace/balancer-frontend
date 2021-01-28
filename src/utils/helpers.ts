@@ -51,25 +51,27 @@ export function sleep(ms: number): Promise<void> {
 }
 
 export function getEtherscanLink(txHash: string): string {
-    const chainId = config.chainId;
-    const prefixMap = {
-        1: '',
-        42: 'kovan.',
-    };
-    const prefix = prefixMap[chainId];
-    const link = `https://${prefix}etherscan.io/tx/${txHash}`;
-    return link;
+    return `https://explorer.arbitrum.io/#/tx/${txHash}`;
+    // const chainId = config.chainId;
+    // const prefixMap = {
+    //     1: '',
+    //     42: 'kovan.',
+    // };
+    // const prefix = prefixMap[chainId];
+    // const link = `https://${prefix}etherscan.io/tx/${txHash}`;
+    // return link;
 }
 
 export function getAccountLink(address: string): string {
-    const chainId = config.chainId;
-    const prefixMap = {
-        1: '',
-        42: 'kovan.',
-    };
-    const prefix = prefixMap[chainId];
-    const link = `https://${prefix}etherscan.io/address/${address}`;
-    return link;
+    return `https://explorer.arbitrum.io/#/address/${address}`;
+    // const chainId = config.chainId;
+    // const prefixMap = {
+    //     1: '',
+    //     42: 'kovan.',
+    // };
+    // const prefix = prefixMap[chainId];
+    // const link = `https://${prefix}etherscan.io/address/${address}`;
+    // return link;
 }
 
 export function getPoolLink(pool: string): string {
