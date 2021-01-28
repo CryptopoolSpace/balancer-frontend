@@ -6,6 +6,7 @@ import { RootState } from '@/store';
 import lock, { getConnectorName, getConnectorLogo } from '@/utils/connectors';
 import provider from '@/utils/provider';
 import Storage from '@/utils/storage';
+import config from '@/config';
 
 enum TransactionStatus {
     PENDING,
@@ -160,6 +161,7 @@ const actions = {
         }
         const web3Provider = new Web3Provider(provider);
         const network = await web3Provider.getNetwork();
+        if(network.chainId !== config.chainId) alert("Wrong network. Please set your wallet to connect to Arbitrum's testnet.")
         const accounts = await web3Provider.listAccounts();
         const account = accounts[0];
         const transactions = Storage.getTransactions(account, network.chainId);
